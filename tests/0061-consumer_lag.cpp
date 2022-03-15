@@ -186,7 +186,7 @@ static void do_test_consumer_lag (bool with_txns) {
      * produce some transactional messages that are aborted to advance
      * the end offset with control messages. */
     produce_aborted_txns(topic, 0, txn_msgcnt);
-    addcnt = txn_msgcnt + 1 /* ctrl msg */;
+    addcnt = txn_msgcnt + 2 /* 2x ctrl msgs */;
   }
 
   /*
